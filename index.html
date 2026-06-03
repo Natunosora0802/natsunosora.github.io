@@ -153,14 +153,17 @@
       width: 200px;
       height: 200px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--blue-100), var(--blue-200));
       flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 72px;
       border: 4px solid var(--white);
       box-shadow: 0 0 0 1px var(--blue-100), 0 8px 32px rgba(55,138,221,0.15);
+      overflow: hidden;
+      background: var(--blue-100);
+    }
+    .hero-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     /* NEWS */
@@ -590,12 +593,14 @@
         </p>
         <div class="hero-sns">
           <a href="https://www.youtube.com/@_na_no_so_" target="_blank" rel="noopener" class="sns-btn">▶ YouTube</a>
-          <a href="https://x.com/na_no_so" target="_blank" rel="noopener" class="sns-btn">𝕏 X</a>
+          <a href="https://x.com/_na_no_so_" target="_blank" rel="noopener" class="sns-btn">𝕏 X</a>
           <a href="https://reality.app/profile/c184eef1?adj_t=8ogcewh_z9yhix5" target="_blank" rel="noopener" class="sns-btn">🎙 REALITY</a>
-          <a href="https://kakuyomu.jp" target="_blank" rel="noopener" class="sns-btn">📖 カクヨム</a>
+          <a href="https://kakuyomu.jp/users/_na_no_so_" target="_blank" rel="noopener" class="sns-btn">📖 カクヨム</a>
         </div>
       </div>
-      <div class="hero-avatar">🌿</div>
+      <div class="hero-avatar">
+        <img src="icon.jpg" alt="夏野空">
+      </div>
     </section>
 
     <!-- NEWS BAR -->
