@@ -3,46 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>夏野空 Official Site</title>
-  <meta name="description" content="歌い手・夏野空のオフィシャルサイト。歌ってみた・オリジナル曲・動画編集サービスなど。">
+  <title>歌うたい、夏野空。｜Official Site</title>
+  <meta name="description" content="歌うたい、夏野空。歌って、話して、作っています。歌ってみた・オリジナル曲・配信・創作など、いろんな形で夏野空を届けています。">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      --blue-50: #E6F1FB;
-      --blue-100: #B5D4F4;
-      --blue-200: #85B7EB;
-      --blue-400: #378ADD;
-      --blue-600: #185FA5;
-      --blue-800: #0C447C;
-      --blue-900: #042C53;
-      --white: #ffffff;
-      --gray-50: #F8F9FA;
-      --gray-100: #F1EFE8;
-      --gray-300: #D3D1C7;
-      --gray-500: #888780;
-      --gray-700: #444441;
-      --gray-900: #1a1a18;
-      --text: #1a1a18;
-      --text-muted: #5F5E5A;
-      --border: rgba(0,0,0,0.08);
-      --radius-sm: 6px;
-      --radius-md: 10px;
-      --radius-lg: 16px;
-      --radius-xl: 24px;
+      --sky-50: #F4FAFF;
+      --sky-100: #E6F3FC;
+      --sky-200: #C7E4F5;
+      --sky-400: #73B5DD;
+      --sky-600: #398CB9;
+      --navy: #18354A;
+      --text: #25333C;
+      --text-muted: #71808A;
+      --white: #FFFFFF;
+      --gray-50: #F8FAFB;
+      --gray-100: #EEF2F4;
+      --border: rgba(24, 53, 74, 0.10);
+      --content-width: 1080px;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 22px;
+      --radius-xl: 32px;
+      --shadow: 0 12px 35px rgba(24, 53, 74, 0.08);
     }
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
-      font-family: 'Zen Kaku Gothic New', sans-serif;
+      font-family: "Zen Kaku Gothic New", sans-serif;
       background: var(--white);
       color: var(--text);
-      line-height: 1.7;
+      line-height: 1.8;
       font-size: 15px;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    section {
+      scroll-margin-top: 80px;
+    }
+
+    .container {
+      width: min(calc(100% - 40px), var(--content-width));
+      margin: 0 auto;
     }
 
     /* NAV */
@@ -50,531 +73,734 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(255,255,255,0.92);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border);
-      padding: 0 1.5rem;
     }
+
     .nav-inner {
-      max-width: 860px;
+      width: min(calc(100% - 40px), var(--content-width));
       margin: 0 auto;
+      min-height: 64px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 56px;
+      gap: 24px;
     }
+
     .nav-logo {
+      text-decoration: none;
+      color: var(--navy);
       font-size: 16px;
       font-weight: 700;
-      color: var(--blue-800);
-      text-decoration: none;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.08em;
+      white-space: nowrap;
     }
+
     .nav-links {
       display: flex;
-      gap: 1.5rem;
+      align-items: center;
+      gap: 22px;
       list-style: none;
     }
+
     .nav-links a {
-      font-size: 13px;
       color: var(--text-muted);
       text-decoration: none;
-      transition: color 0.2s;
+      font-size: 13px;
+      font-weight: 700;
+      transition: color 0.2s ease;
     }
-    .nav-links a:hover { color: var(--blue-600); }
 
-    /* MAIN */
-    main { max-width: 860px; margin: 0 auto; padding: 0 1.5rem; }
+    .nav-links a:hover {
+      color: var(--sky-600);
+    }
 
     /* HERO */
     .hero {
-      padding: 5rem 0 4rem;
-      display: flex;
+      background:
+        radial-gradient(circle at 80% 25%, rgba(115, 181, 221, 0.18), transparent 30%),
+        linear-gradient(135deg, var(--sky-50), #ffffff 62%);
+      padding: 92px 0 88px;
+      overflow: hidden;
+    }
+
+    .hero-inner {
+      width: min(calc(100% - 40px), var(--content-width));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.85fr);
       align-items: center;
-      gap: 3rem;
+      gap: 70px;
     }
-    .hero-text { flex: 1; }
-    .hero-badge {
+
+    .hero-kicker {
       display: inline-block;
-      background: var(--blue-50);
-      color: var(--blue-600);
-      font-size: 12px;
-      font-weight: 500;
-      padding: 4px 14px;
-      border-radius: 99px;
-      margin-bottom: 1rem;
-      letter-spacing: 0.05em;
-    }
-    .hero-name {
-      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      margin-bottom: 14px;
+      color: var(--sky-600);
+      font-size: 13px;
       font-weight: 700;
-      color: var(--blue-900);
+      letter-spacing: 0.12em;
+    }
+
+    .hero-title {
+      color: var(--navy);
+      font-size: clamp(42px, 6vw, 72px);
       line-height: 1.15;
-      letter-spacing: -0.01em;
-      margin-bottom: 0.25rem;
+      letter-spacing: 0.04em;
+      font-weight: 700;
     }
-    .hero-name-en {
-      font-family: 'Playfair Display', serif;
+
+    .hero-title-en {
+      margin-top: 5px;
+      color: var(--sky-600);
+      font-family: "Playfair Display", serif;
+      font-size: 18px;
       font-style: italic;
-      font-size: clamp(1rem, 2vw, 1.25rem);
-      color: var(--blue-400);
-      margin-bottom: 1.25rem;
-      display: block;
     }
-    .hero-desc {
-      font-size: 14px;
-      color: var(--text-muted);
-      line-height: 1.8;
-      margin-bottom: 1.75rem;
-      max-width: 380px;
+
+    .hero-copy {
+      max-width: 620px;
+      margin-top: 26px;
+      font-size: 16px;
+      line-height: 2;
     }
-    .hero-sns {
+
+    .hero-copy strong {
+      color: var(--navy);
+    }
+
+    .hero-links {
       display: flex;
-      gap: 10px;
       flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 28px;
     }
-    .sns-btn {
+
+    .hero-link {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      font-size: 12px;
-      font-weight: 500;
-      color: var(--blue-700);
-      background: var(--blue-50);
-      border: 1px solid var(--blue-100);
-      padding: 7px 14px;
-      border-radius: 99px;
+      justify-content: center;
+      min-height: 40px;
+      padding: 8px 15px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.78);
+      color: var(--navy);
       text-decoration: none;
-      transition: background 0.2s, border-color 0.2s;
+      font-size: 13px;
+      font-weight: 700;
+      transition: transform 0.2s ease, border-color 0.2s ease;
     }
-    .sns-btn:hover { background: var(--blue-100); border-color: var(--blue-200); }
+
+    .hero-link:hover {
+      transform: translateY(-2px);
+      border-color: var(--sky-400);
+    }
+
+    .hero-visual {
+      display: flex;
+      justify-content: center;
+    }
+
     .hero-avatar {
-      width: 200px;
-      height: 200px;
+      width: min(360px, 72vw);
+      aspect-ratio: 1;
       border-radius: 50%;
-      flex-shrink: 0;
-      border: 4px solid var(--white);
-      box-shadow: 0 0 0 1px var(--blue-100), 0 8px 32px rgba(55,138,221,0.15);
-      overflow: hidden;
-      background: var(--blue-100);
+      padding: 13px;
+      background: linear-gradient(145deg, var(--sky-200), #ffffff);
+      box-shadow: var(--shadow);
     }
+
     .hero-avatar img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      display: block;
+      border-radius: 50%;
+      background: var(--sky-100);
     }
 
     /* NEWS */
-    .news-bar {
-      background: var(--blue-50);
-      border-radius: var(--radius-lg);
-      padding: 1rem 1.5rem;
-      display: flex;
-      gap: 1rem;
-      align-items: center;
-      margin-bottom: 4rem;
-      flex-wrap: wrap;
+    .news {
+      border-bottom: 1px solid var(--border);
+      background: var(--white);
     }
+
+    .news-inner {
+      min-height: 62px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
     .news-label {
+      flex: 0 0 auto;
+      color: var(--sky-600);
       font-size: 11px;
       font-weight: 700;
-      color: var(--blue-600);
-      background: var(--blue-400);
-      color: var(--white);
-      padding: 3px 10px;
-      border-radius: 99px;
-      white-space: nowrap;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.15em;
     }
+
     .news-items {
       display: flex;
-      gap: 1.5rem;
       flex-wrap: wrap;
+      gap: 10px 24px;
     }
+
     .news-item {
       font-size: 13px;
-      color: var(--blue-800);
+      color: var(--text-muted);
     }
-    .news-item a {
-      color: var(--blue-600);
-      text-decoration: none;
-      font-weight: 500;
-    }
-    .news-item a:hover { text-decoration: underline; }
 
-    /* SECTION */
-    section { margin-bottom: 5rem; }
-    .section-header {
+    .news-item a {
+      color: var(--navy);
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    /* COMMON SECTION */
+    .section {
+      padding: 96px 0;
+    }
+
+    .section:nth-of-type(even) {
+      background: var(--gray-50);
+    }
+
+    .section-heading {
+      margin-bottom: 42px;
+    }
+
+    .section-kicker {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--sky-600);
+      font-family: "Playfair Display", serif;
+      font-size: 17px;
+      font-style: italic;
+    }
+
+    .section-title {
+      color: var(--navy);
+      font-size: clamp(28px, 4vw, 40px);
+      line-height: 1.35;
+      letter-spacing: 0.04em;
+    }
+
+    .section-lead {
+      max-width: 680px;
+      margin-top: 13px;
+      color: var(--text-muted);
+    }
+
+    /* INTRO */
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .intro-catch {
+      color: var(--navy);
+      font-size: clamp(24px, 3vw, 34px);
+      line-height: 1.65;
+      font-weight: 700;
+    }
+
+    .intro-text p + p {
+      margin-top: 18px;
+    }
+
+    .intro-emphasis {
+      margin-top: 25px;
+      padding: 20px 24px;
+      border-left: 3px solid var(--sky-400);
+      background: var(--sky-50);
+      color: var(--navy);
+      font-weight: 700;
+    }
+
+    /* MUSIC */
+    .sub-heading {
       display: flex;
       align-items: baseline;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-      padding-bottom: 0.75rem;
-      border-bottom: 1.5px solid var(--blue-50);
-    }
-    .section-title {
-      font-size: 20px;
-      font-weight: 700;
-      color: var(--blue-900);
-      letter-spacing: -0.01em;
-    }
-    .section-title-en {
-      font-family: 'Playfair Display', serif;
-      font-style: italic;
-      font-size: 13px;
-      color: var(--blue-300);
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 16px;
     }
 
-    /* PROFILE */
-    .profile-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
+    .sub-heading h3 {
+      color: var(--navy);
+      font-size: 20px;
     }
-    .profile-card {
-      background: var(--gray-50);
-      border-radius: var(--radius-lg);
-      padding: 1.25rem 1.5rem;
-    }
-    .profile-card-label {
-      font-size: 11px;
-      font-weight: 700;
-      color: var(--blue-400);
+
+    .sub-heading span {
+      color: var(--text-muted);
+      font-size: 12px;
       letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 8px;
     }
-    .profile-card p {
+
+    .original-card {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 28px;
+      align-items: center;
+      padding: 20px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background: var(--white);
+      box-shadow: var(--shadow);
+      margin-bottom: 54px;
+    }
+
+    .original-thumb {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border-radius: var(--radius-md);
+      background: var(--sky-100);
+    }
+
+    .original-title {
+      color: var(--navy);
+      font-size: 30px;
+      font-weight: 700;
+    }
+
+    .original-date {
+      margin-top: 2px;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .original-description {
+      margin-top: 13px;
+      color: var(--text-muted);
       font-size: 14px;
-      color: var(--text);
-      line-height: 1.8;
     }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 20px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 9px 17px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      opacity: 0.88;
+    }
+
+    .button-primary {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .button-outline {
+      border: 1px solid var(--border);
+      background: var(--white);
+      color: var(--navy);
+    }
+
+    .playlist-wrap {
+      overflow: hidden;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .playlist-wrap iframe {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 0;
+    }
+
+    /* STREAM */
+    .stream-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .stream-card {
+      padding: 30px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .stream-card-label {
+      color: var(--sky-600);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .stream-card h3 {
+      margin-top: 8px;
+      color: var(--navy);
+      font-size: 25px;
+    }
+
+    .stream-card p {
+      margin-top: 13px;
+      color: var(--text-muted);
+    }
+
+    .stream-note {
+      margin-top: 30px;
+      text-align: center;
+      color: var(--navy);
+      font-size: 19px;
+      font-weight: 700;
+    }
+
+    /* CREATIVE */
+    .creative-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .creative-card {
+      padding: 26px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background: var(--white);
+    }
+
+    .creative-card .icon {
+      color: var(--sky-600);
+      font-size: 24px;
+    }
+
+    .creative-card h3 {
+      margin-top: 10px;
+      color: var(--navy);
+      font-size: 20px;
+    }
+
+    .creative-card p {
+      margin-top: 9px;
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    .creative-card a {
+      display: inline-block;
+      margin-top: 15px;
+      color: var(--sky-600);
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    /* ABOUT */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.75fr 1.25fr;
+      gap: 60px;
+    }
+
+    .about-label {
+      color: var(--sky-600);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+    }
+
+    .about-name {
+      margin-top: 7px;
+      color: var(--navy);
+      font-size: 32px;
+      font-weight: 700;
+    }
+
+    .about-copy {
+      margin-top: 16px;
+      color: var(--text-muted);
+    }
+
     .tag-list {
       display: flex;
       flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 4px;
-    }
-    .tag {
-      font-size: 12px;
-      background: var(--blue-50);
-      color: var(--blue-600);
-      border: 1px solid var(--blue-100);
-      padding: 3px 10px;
-      border-radius: 99px;
+      gap: 8px;
+      margin-top: 24px;
     }
 
-    /* TIMELINE */
-    .timeline {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
+    .tag {
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: var(--sky-50);
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: 700;
     }
+
+    .timeline {
+      border-top: 1px solid var(--border);
+    }
+
     .timeline-item {
-      display: flex;
-      gap: 1.25rem;
-      align-items: flex-start;
-      padding: 0.75rem 0;
+      display: grid;
+      grid-template-columns: 85px 1fr;
+      gap: 20px;
+      padding: 14px 0;
       border-bottom: 1px solid var(--border);
     }
-    .timeline-item:last-child { border-bottom: none; }
+
     .timeline-date {
+      color: var(--sky-600);
       font-size: 12px;
-      color: var(--blue-400);
       font-weight: 700;
-      min-width: 70px;
-      padding-top: 2px;
-      letter-spacing: 0.05em;
     }
+
     .timeline-content {
       font-size: 14px;
-      color: var(--text);
-      line-height: 1.7;
     }
-    .timeline-content a {
-      color: var(--blue-600);
-      text-decoration: none;
-    }
-    .timeline-content a:hover { text-decoration: underline; }
 
-    /* WORKS */
-    .original-card {
-      background: var(--gray-50);
-      border-radius: var(--radius-lg);
-      padding: 1.25rem;
-      display: flex;
-      gap: 1.25rem;
-      align-items: center;
-      margin-bottom: 1.5rem;
-    }
-    .original-thumb {
-      width: 100px;
-      height: 100px;
-      border-radius: var(--radius-md);
-      object-fit: cover;
-      flex-shrink: 0;
-      background: var(--blue-100);
-    }
-    .original-info { flex: 1; }
-    .original-title {
-      font-size: 17px;
+    .timeline-content a {
+      color: var(--sky-600);
       font-weight: 700;
-      color: var(--blue-900);
-      margin-bottom: 4px;
     }
-    .original-date {
-      font-size: 12px;
-      color: var(--text-muted);
-      margin-bottom: 12px;
+
+    /* CONTACT */
+    .contact {
+      background: var(--navy);
+      color: var(--white);
     }
-    .btn-group { display: flex; gap: 8px; flex-wrap: wrap; }
-    .btn {
+
+    .contact .section-kicker {
+      color: var(--sky-200);
+    }
+
+    .contact .section-title {
+      color: var(--white);
+    }
+
+    .contact .section-lead {
+      color: rgba(255,255,255,0.72);
+    }
+
+    .contact-box {
+      margin-top: 35px;
+      padding: 30px;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: var(--radius-lg);
+      background: rgba(255,255,255,0.06);
+    }
+
+    .contact-box p {
+      color: rgba(255,255,255,0.78);
+    }
+
+    .contact-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .contact-button {
       display: inline-flex;
       align-items: center;
-      gap: 5px;
-      font-size: 12px;
-      font-weight: 500;
-      padding: 6px 14px;
-      border-radius: 99px;
-      text-decoration: none;
-      transition: background 0.2s;
-      font-family: 'Zen Kaku Gothic New', sans-serif;
-      cursor: pointer;
-      border: none;
-    }
-    .btn-primary {
-      background: var(--blue-400);
-      color: var(--white);
-    }
-    .btn-primary:hover { background: var(--blue-600); }
-    .btn-outline {
-      background: var(--white);
-      color: var(--blue-600);
-      border: 1px solid var(--blue-200);
-    }
-    .btn-outline:hover { background: var(--blue-50); }
-
-    .playlist-section-label {
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--blue-800);
-      margin-bottom: 0.75rem;
-    }
-    .playlist-embed {
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      background: var(--gray-50);
-    }
-    .playlist-embed iframe {
-      display: block;
-      width: 100%;
-      aspect-ratio: 16/9;
-      border: none;
-    }
-
-    /* SERVICE */
-    .plans-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-    }
-    .plan-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 1.5rem 1.25rem;
-      position: relative;
-    }
-    .plan-card.featured {
-      border: 2px solid var(--blue-400);
-    }
-    .plan-badge {
-      position: absolute;
-      top: -12px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: var(--blue-400);
-      color: var(--white);
-      font-size: 10px;
-      font-weight: 700;
-      padding: 3px 12px;
-      border-radius: 99px;
-      white-space: nowrap;
-      letter-spacing: 0.05em;
-    }
-    .plan-name {
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--blue-600);
-      letter-spacing: 0.08em;
-      margin-bottom: 8px;
-    }
-    .plan-price {
-      font-size: 24px;
-      font-weight: 700;
-      color: var(--blue-900);
-      margin-bottom: 2px;
-    }
-    .plan-price span {
-      font-size: 13px;
-      font-weight: 400;
-      color: var(--text-muted);
-    }
-    .plan-note {
-      font-size: 11px;
-      color: var(--text-muted);
-      margin-bottom: 1rem;
-    }
-    .plan-features {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      border-top: 1px solid var(--border);
-      padding-top: 1rem;
-    }
-    .plan-features li {
-      font-size: 13px;
-      color: var(--text);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .plan-features li::before {
-      content: '';
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--blue-400);
-      flex-shrink: 0;
-    }
-
-    .flow-bar {
-      background: var(--blue-50);
-      border-radius: var(--radius-lg);
-      padding: 1.25rem 1.5rem;
-      margin-bottom: 1.5rem;
-    }
-    .flow-label {
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--blue-800);
-      letter-spacing: 0.05em;
-      margin-bottom: 10px;
-    }
-    .flow-steps {
-      display: flex;
-      gap: 8px;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    .flow-step {
-      display: flex;
-      align-items: center;
-      gap: 7px;
-      font-size: 13px;
-      color: var(--blue-700);
-    }
-    .flow-num {
-      background: var(--blue-400);
-      color: var(--white);
-      border-radius: 50%;
-      width: 22px;
-      height: 22px;
-      display: flex;
-      align-items: center;
       justify-content: center;
-      font-size: 11px;
-      font-weight: 700;
-      flex-shrink: 0;
-    }
-    .flow-arrow {
-      color: var(--blue-300);
-      font-size: 16px;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 8px;
-    }
-    .contact-card {
-      background: var(--gray-50);
-      border-radius: var(--radius-lg);
-      padding: 1rem;
-      text-align: center;
-    }
-    .contact-label {
-      font-size: 11px;
-      color: var(--text-muted);
-      margin-bottom: 8px;
-    }
-    .contact-card a {
-      font-size: 13px;
-      color: var(--blue-600);
+      min-height: 44px;
+      padding: 9px 18px;
+      border-radius: 999px;
+      background: var(--white);
+      color: var(--navy);
       text-decoration: none;
-      font-weight: 500;
+      font-size: 13px;
+      font-weight: 700;
     }
-    .contact-card a:hover { text-decoration: underline; }
 
     /* FOOTER */
     footer {
-      border-top: 1px solid var(--border);
-      padding: 2.5rem 1.5rem;
-      text-align: center;
-    }
-    .footer-inner {
-      max-width: 860px;
-      margin: 0 auto;
-    }
-    .footer-name {
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--blue-800);
-      margin-bottom: 0.5rem;
-    }
-    .footer-sns {
-      display: flex;
-      gap: 12px;
-      justify-content: center;
-      margin-bottom: 1rem;
-      flex-wrap: wrap;
-    }
-    .footer-sns a {
-      font-size: 12px;
-      color: var(--text-muted);
-      text-decoration: none;
-    }
-    .footer-sns a:hover { color: var(--blue-600); }
-    .footer-copy {
-      font-size: 11px;
-      color: var(--gray-500);
+      padding: 42px 0;
+      background: #102938;
+      color: rgba(255,255,255,0.72);
     }
 
-    /* RESPONSIVE */
-    @media (max-width: 640px) {
-      .hero { flex-direction: column-reverse; gap: 1.5rem; align-items: flex-start; padding: 3rem 0 2.5rem; }
-      .hero-avatar { width: 120px; height: 120px; font-size: 48px; }
-      .profile-grid { grid-template-columns: 1fr; }
-      .plans-grid { grid-template-columns: 1fr; }
-      .contact-grid { grid-template-columns: 1fr; }
-      .nav-links { display: none; }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      align-items: flex-end;
+    }
+
+    .footer-brand {
+      color: var(--white);
+      font-size: 19px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+    }
+
+    .footer-copy {
+      margin-top: 5px;
+      font-size: 12px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 13px 18px;
+    }
+
+    .footer-links a {
+      color: rgba(255,255,255,0.75);
+      text-decoration: none;
+      font-size: 12px;
+    }
+
+    .copyright {
+      margin-top: 25px;
+      font-size: 11px;
+      color: rgba(255,255,255,0.42);
+    }
+
+    /* MOBILE */
+    @media (max-width: 760px) {
+      .nav-inner {
+        min-height: 58px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding: 65px 0 60px;
+      }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 42px;
+      }
+
+      .hero-visual {
+        order: -1;
+      }
+
+      .hero-avatar {
+        width: min(260px, 68vw);
+      }
+
+      .hero-copy {
+        font-size: 15px;
+      }
+
+      .news-inner {
+        padding: 13px 0;
+        align-items: flex-start;
+      }
+
+      .news-items {
+        display: block;
+      }
+
+      .news-item {
+        display: block;
+      }
+
+      .news-item + .news-item {
+        margin-top: 3px;
+      }
+
+      .section {
+        padding: 70px 0;
+      }
+
+      .intro-grid,
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 34px;
+      }
+
+      .original-card {
+        grid-template-columns: 1fr;
+      }
+
+      .stream-grid,
+      .creative-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stream-card {
+        padding: 25px;
+      }
+
+      .timeline-item {
+        grid-template-columns: 70px 1fr;
+        gap: 14px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .footer-links {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container,
+      .nav-inner,
+      .hero-inner {
+        width: min(calc(100% - 28px), var(--content-width));
+      }
+
+      .hero-title {
+        font-size: 39px;
+      }
+
+      .section-title {
+        font-size: 29px;
+      }
+
+      .original-title {
+        font-size: 26px;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <!-- NAV -->
   <nav>
     <div class="nav-inner">
-      <a href="#" class="nav-logo">夏野空</a>
+      <a href="#" class="nav-logo">歌うたい、夏野空。</a>
       <ul class="nav-links">
-        <li><a href="#profile">プロフィール</a></li>
-        <li><a href="#works">作品</a></li>
-        <li><a href="#service">編集サービス</a></li>
+        <li><a href="#about-intro">夏野空って？</a></li>
+        <li><a href="#music">MUSIC</a></li>
+        <li><a href="#stream">STREAM</a></li>
+        <li><a href="#creative">CREATIVE</a></li>
+        <li><a href="#profile">ABOUT</a></li>
+        <li><a href="#contact">CONTACT</a></li>
       </ul>
     </div>
   </nav>
@@ -583,198 +809,304 @@
 
     <!-- HERO -->
     <section class="hero">
-      <div class="hero-text">
-        <span class="hero-badge">歌い手 / うたいて</span>
-        <h1 class="hero-name">夏野空</h1>
-        <span class="hero-name-en">Natsuno Sora</span>
-        <p class="hero-desc">
-          歌ってみたを中心に、オリジナル曲・ダンス・イラスト・小説…<br>
-          気になったことは全部やってみるタイプです。
-        </p>
-        <div class="hero-sns">
-          <a href="https://www.youtube.com/@_na_no_so_" target="_blank" rel="noopener" class="sns-btn">▶ YouTube</a>
-          <a href="https://x.com/_na_no_so_" target="_blank" rel="noopener" class="sns-btn">𝕏 X</a>
-          <a href="https://reality.app/profile/c184eef1?adj_t=8ogcewh_z9yhix5" target="_blank" rel="noopener" class="sns-btn">🎙 REALITY</a>
-          <a href="https://kakuyomu.jp/users/_na_no_so_" target="_blank" rel="noopener" class="sns-btn">📖 カクヨム</a>
+      <div class="hero-inner">
+        <div class="hero-text">
+          <span class="hero-kicker">SINGER / CREATOR</span>
+          <h1 class="hero-title">歌うたい、<br>夏野空。</h1>
+          <div class="hero-title-en">Natsunosora</div>
+
+          <p class="hero-copy">
+            <strong>歌って、話して、作っています。</strong><br>
+            歌うことも、話すことも、「好き」を形にすることも大好き。<br>
+            歌ってみた、オリジナル曲、配信、創作。<br>
+            いろんな形で、夏野空を届けています。
+          </p>
+
+          <div class="hero-links">
+            <a class="hero-link" href="https://www.youtube.com/@_na_no_so_" target="_blank" rel="noopener">▶ YouTube</a>
+            <a class="hero-link" href="https://x.com/_na_no_so_" target="_blank" rel="noopener">𝕏 X</a>
+            <a class="hero-link" href="https://note.com/_na_no_so_" target="_blank" rel="noopener">📝 note</a>
+            <a class="hero-link" href="https://coconala.com/users/5705140/" target="_blank" rel="noopener">ココナラ</a>
+          </div>
         </div>
-      </div>
-      <div class="hero-avatar">
-        <img src="icon.jpg" alt="夏野空">
+
+        <div class="hero-visual">
+          <div class="hero-avatar">
+            <img src="icon.jpg" alt="夏野空">
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- NEWS BAR -->
-    <div class="news-bar">
-      <span class="news-label">NEW</span>
-      <div class="news-items">
-        <span class="news-item">📀 1st Single <a href="https://big-up.style/uZuqsYlISS" target="_blank" rel="noopener">「Best Day」</a> 配信中</span>
-        <span class="news-item">🎙 Podcast <a href="https://www.youtube.com/@_na_no_so_" target="_blank" rel="noopener">「夏野空の自由ほんぽー期」</a> 更新中</span>
+    <!-- NEWS -->
+    <div class="news">
+      <div class="container news-inner">
+        <span class="news-label">NEWS</span>
+        <div class="news-items">
+          <span class="news-item">📀 1st Single <a href="https://big-up.style/uZuqsYlISS" target="_blank" rel="noopener">「Best Day」</a> 配信中</span>
+          <span class="news-item">🎙 Podcast <a href="https://www.youtube.com/watch?v=QLKNbf515xY&list=PLpjs7daR0sZlY0EhUbuHNXWEnPz4qyjqo" target="_blank" rel="noopener">「夏野空の自由ほんぽー期」</a> 更新中</span>
+        </div>
       </div>
     </div>
 
-    <!-- PROFILE -->
-    <section id="profile">
-      <div class="section-header">
-        <h2 class="section-title">プロフィール</h2>
-        <span class="section-title-en">Profile</span>
-      </div>
-      <div class="profile-grid" style="margin-bottom: 1.5rem;">
-        <div class="profile-card">
-          <p class="profile-card-label">About</p>
-          <p>2021年12月より活動開始。歌ってみた・オリジナル曲・ポッドキャストなど幅広く展開。</p>
+    <!-- INTRO -->
+    <section class="section" id="about-intro">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">About Natsunosora</span>
+          <h2 class="section-title">夏野空って？</h2>
         </div>
-        <div class="profile-card">
-          <p class="profile-card-label">活動ジャンル</p>
-          <div class="tag-list">
-            <span class="tag">歌ってみた</span>
-            <span class="tag">オリジナル曲</span>
-            <span class="tag">ダンス</span>
-            <span class="tag">イラスト</span>
-            <span class="tag">小説</span>
-            <span class="tag">ポッドキャスト</span>
-            <span class="tag">動画編集</span>
-          </div>
-        </div>
-      </div>
 
-      <!-- TIMELINE -->
-      <div class="timeline">
-        <div class="timeline-item">
-          <span class="timeline-date">2021.12</span>
-          <span class="timeline-content">HEARにて活動開始</span>
-        </div>
-        <div class="timeline-item">
-          <span class="timeline-date">2023.02</span>
-          <span class="timeline-content"><a href="https://reality.app/profile/c184eef1?adj_t=8ogcewh_z9yhix5" target="_blank" rel="noopener">REALITY</a> にて配信スタート</span>
-        </div>
-        <div class="timeline-item">
-          <span class="timeline-date">2023.04</span>
-          <span class="timeline-content">ニコニコ動画に踊ってみた動画を初投稿</span>
-        </div>
-        <div class="timeline-item">
-          <span class="timeline-date">2024.05</span>
-          <span class="timeline-content"><a href="https://www.youtube.com/@_na_no_so_" target="_blank" rel="noopener">YouTube</a> に歌ってみた動画を初投稿</span>
-        </div>
-        <div class="timeline-item">
-          <span class="timeline-date">2025.01</span>
-          <span class="timeline-content">Podcast「夏野空の自由ほんぽー期」配信スタート</span>
-        </div>
-        <div class="timeline-item">
-          <span class="timeline-date">2025.04</span>
-          <span class="timeline-content">1st Single <a href="https://big-up.style/uZuqsYlISS" target="_blank" rel="noopener">「Best Day」</a> リリース</span>
+        <div class="intro-grid">
+          <div class="intro-catch">
+            歌うだけじゃない。<br>
+            でも、歌うことが<br>
+            真ん中にある。
+          </div>
+
+          <div class="intro-text">
+            <p>
+              歌うことと話すことが大好き。
+            </p>
+            <p>
+              歌ってみたでは歌を。<br>
+              オリジナル曲では自分の言葉を。<br>
+              ライブ配信ではあなたとおしゃべりを。
+            </p>
+            <p>
+              そして、動画や小説など、<br>
+              「やってみたい！」と思ったことも<br>
+              ひとつずつ形にしています。
+            </p>
+            <div class="intro-emphasis">
+              歌を聴きに来てもいい。<br>
+              話しに来てもいい。<br>
+              ふらっと遊びに来てもらえたら嬉しいです。
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- WORKS -->
-    <section id="works">
-      <div class="section-header">
-        <h2 class="section-title">作品</h2>
-        <span class="section-title-en">Works</span>
-      </div>
+    <!-- MUSIC -->
+    <section class="section" id="music">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">Music</span>
+          <h2 class="section-title">歌うことが、いちばん好き。</h2>
+          <p class="section-lead">
+            歌ってみたからオリジナル曲まで。歌うことを中心に、いろんな音楽を届けています。
+          </p>
+        </div>
 
-      <p style="font-size: 13px; font-weight: 700; color: var(--blue-800); margin-bottom: 0.75rem; letter-spacing: 0.05em;">★ オリジナル曲</p>
-      <div class="original-card">
-        <img
-          class="original-thumb"
-          src="https://img.youtube.com/vi/iGWN03Zokpk/maxresdefault.jpg"
-          alt="Best Day サムネイル"
-          onerror="this.style.background='var(--blue-100)'; this.removeAttribute('src');"
-        >
-        <div class="original-info">
-          <p class="original-title">Best Day</p>
-          <p class="original-date">2025.04.30 リリース</p>
-          <div class="btn-group">
-            <a href="https://youtu.be/iGWN03Zokpk" target="_blank" rel="noopener" class="btn btn-primary">▶ YouTube</a>
-            <a href="https://big-up.style/uZuqsYlISS" target="_blank" rel="noopener" class="btn btn-outline">🎵 各種配信</a>
+        <div class="sub-heading">
+          <h3>ORIGINAL</h3>
+          <span>オリジナル曲</span>
+        </div>
+
+        <div class="original-card">
+          <img
+            class="original-thumb"
+            src="https://img.youtube.com/vi/iGWN03Zokpk/maxresdefault.jpg"
+            alt="Best Day サムネイル"
+            onerror="this.style.background='var(--sky-100)'; this.removeAttribute('src');"
+          >
+
+          <div>
+            <p class="original-title">Best Day</p>
+            <p class="original-date">2025.04.30 Release</p>
+            <p class="original-description">
+              夏野空 1st Single。YouTubeでMVを公開し、各種音楽配信サービスでも配信しています。
+            </p>
+
+            <div class="button-row">
+              <a class="button button-primary" href="https://youtu.be/iGWN03Zokpk" target="_blank" rel="noopener">▶ YouTubeで聴く</a>
+              <a class="button button-outline" href="https://big-up.style/uZuqsYlISS" target="_blank" rel="noopener">🎵 各種配信</a>
+            </div>
           </div>
         </div>
-      </div>
 
-      <p class="playlist-section-label">🎤 歌ってみた</p>
-      <div class="playlist-embed">
-        <iframe
-          src="https://www.youtube.com/embed/videoseries?list=PLpjs7daR0sZnViz_F1Ct_0kxkBjxxggXo"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-          title="夏野空 歌ってみたプレイリスト"
-        ></iframe>
+        <div class="sub-heading">
+          <h3>COVER</h3>
+          <span>歌ってみた</span>
+        </div>
+
+        <div class="playlist-wrap">
+          <iframe
+            src="https://www.youtube.com/embed/videoseries?list=PLpjs7daR0sZnViz_F1Ct_0kxkBjxxggXo"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            title="夏野空 歌ってみたプレイリスト"
+          ></iframe>
+        </div>
       </div>
     </section>
 
-    <!-- SERVICE -->
-    <section id="service">
-      <div class="section-header">
-        <h2 class="section-title">動画編集サービス</h2>
-        <span class="section-title-en">Video Editing</span>
-      </div>
-      <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 1.5rem;">歌ってみた動画の編集承ります。お気軽にご相談ください！</p>
+    <!-- STREAM -->
+    <section class="section" id="stream">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">Stream</span>
+          <h2 class="section-title">歌って、話して、会える場所。</h2>
+          <p class="section-lead">
+            歌だけじゃなく、おしゃべりも大好き。ライブ配信では、その日の気分でゆるく楽しく過ごしています。
+          </p>
+        </div>
 
-      <div class="plans-grid">
-        <div class="plan-card">
-          <p class="plan-name">SIMPLE</p>
-          <p class="plan-price">¥3,000<span>〜</span></p>
-          <p class="plan-note">税込・要相談</p>
-          <ul class="plan-features">
-            <li>字幕</li>
-            <li>簡単なエフェクト</li>
-          </ul>
+        <div class="stream-grid">
+          <article class="stream-card">
+            <span class="stream-card-label">RAVIO</span>
+            <h3>ふらっと会える場所。</h3>
+            <p>
+              30分限定オープン配信など、気ままにおしゃべりしています。<br>
+              ライブ配信場所はRAVIO。ふらっと遊びに来てね。
+            </p>
+            <div class="button-row">
+              <a class="button button-outline" href="https://ravio-live.com/" target="_blank" rel="noopener">RAVIOへ</a>
+            </div>
+          </article>
+
+          <article class="stream-card">
+            <span class="stream-card-label">Palmu</span>
+            <h3>もう少し近くで話す場所。</h3>
+            <p>
+              気まぐれに、歌ったり話したりしています。<br>
+              ライブ配信するときはXでお知らせします。
+            </p>
+            <div class="button-row">
+              <a class="button button-outline" href="https://x.com/_na_no_so_" target="_blank" rel="noopener">配信通知はXで確認してね</a>
+            </div>
+          </article>
         </div>
-        <div class="plan-card featured">
-          <span class="plan-badge">人気</span>
-          <p class="plan-name">STANDARD</p>
-          <p class="plan-price">¥5,000<span>〜</span></p>
-          <p class="plan-note">税込・要相談</p>
-          <ul class="plan-features">
-            <li>字幕</li>
-            <li>がっつりエフェクト</li>
-          </ul>
+
+        <p class="stream-note">あなたの話も聞かせてね。</p>
+      </div>
+    </section>
+
+    <!-- CREATIVE -->
+    <section class="section" id="creative">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">Creative</span>
+          <h2 class="section-title">歌うだけじゃなく、作る。</h2>
+          <p class="section-lead">
+            「やってみたい！」をそのままにしない。歌以外の創作も、自分のペースで形にしています。
+          </p>
         </div>
-        <div class="plan-card">
-          <p class="plan-name">MOTION</p>
-          <p class="plan-price">¥8,000<span>〜</span></p>
-          <p class="plan-note">税込・要相談</p>
-          <ul class="plan-features">
-            <li>字幕</li>
-            <li>がっつりエフェクト</li>
-            <li>キャラ・小物のモーション</li>
-          </ul>
+
+        <div class="creative-grid">
+          <article class="creative-card">
+            <div class="icon">🎬</div>
+            <h3>VIDEO</h3>
+            <p>
+              歌ってみた動画やShortsなど、自分で企画・編集した映像を制作しています。
+            </p>
+            <a href="#contact">動画編集のご依頼 →</a>
+          </article>
+
+          <article class="creative-card">
+            <div class="icon">📖</div>
+            <h3>NOVEL</h3>
+            <p>
+              小説など、言葉で物語を作ることも好き。思いついた物語を少しずつ形にしています。
+            </p>
+            <a href="https://kakuyomu.jp/users/_na_no_so_" target="_blank" rel="noopener">カクヨムを見る →</a>
+          </article>
+
+          <article class="creative-card">
+            <div class="icon">🎙</div>
+            <h3>PODCAST</h3>
+            <p>
+              「夏野空の自由ほんぽー期」など、歌とは違う形で声を届ける活動もしています。
+            </p>
+            <a href="https://www.youtube.com/@_na_no_so_" target="_blank" rel="noopener">YouTubeを見る →</a>
+          </article>
         </div>
       </div>
+    </section>
 
-      <p style="font-size: 13px; font-weight: 700; color: var(--blue-800); margin-bottom: 0.75rem; letter-spacing: 0.05em;">🎬 編集実績</p>
-      <div class="playlist-embed" style="margin-bottom: 1.5rem;">
-        <iframe
-          src="https://www.youtube.com/embed/videoseries?list=PLpjs7daR0sZkWx-4BgKIh4mhQV9ytnSWo"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-          title="夏野空 編集実績プレイリスト"
-        ></iframe>
-      </div>
+    <!-- ABOUT -->
+    <section class="section" id="profile">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">About</span>
+          <h2 class="section-title">もっと、夏野空のこと。</h2>
+        </div>
 
-      <div class="flow-bar">
-        <p class="flow-label">ご依頼の流れ</p>
-        <div class="flow-steps">
-          <div class="flow-step"><span class="flow-num">1</span>お問い合わせ</div>
-          <span class="flow-arrow">→</span>
-          <div class="flow-step"><span class="flow-num">2</span>お見積もり・ご相談</div>
-          <span class="flow-arrow">→</span>
-          <div class="flow-step"><span class="flow-num">3</span>制作・納品</div>
+        <div class="about-grid">
+          <div>
+            <span class="about-label">PROFILE</span>
+            <div class="about-name">夏野空</div>
+            <p class="about-copy">
+              2021年12月より活動開始。<br>
+              歌ってみた・オリジナル曲・配信・ポッドキャスト・創作など、興味を持ったことを幅広く活動しています。
+            </p>
+
+            <div class="tag-list">
+              <span class="tag">歌ってみた</span>
+              <span class="tag">オリジナル曲</span>
+              <span class="tag">ライブ配信</span>
+              <span class="tag">ポッドキャスト</span>
+              <span class="tag">動画編集</span>
+              <span class="tag">小説</span>
+              <span class="tag">創作</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="timeline">
+              <div class="timeline-item">
+                <span class="timeline-date">2021.12</span>
+                <span class="timeline-content">HEARにて活動開始</span>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-date">2023.02</span>
+                <span class="timeline-content"><a href="https://reality.app/profile/c184eef1?adj_t=8ogcewh_z9yhix5" target="_blank" rel="noopener">REALITY</a>にてライブ配信活動スタート</span>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-date">2023.04</span>
+                <span class="timeline-content">ニコニコ動画に踊ってみた動画を初投稿</span>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-date">2024.05</span>
+                <span class="timeline-content"><a href="https://www.youtube.com/@_na_no_so_" target="_blank" rel="noopener">YouTube</a> に歌ってみた動画を初投稿</span>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-date">2025.01</span>
+                <span class="timeline-content">Podcast<a href="https://www.youtube.com/watch?v=QLKNbf515xY&list=PLpjs7daR0sZlY0EhUbuHNXWEnPz4qyjqo" target="_blank" rel="noopener">「夏野空の自由ほんぽー期」</a>配信スタート</span>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-date">2025.04</span>
+                <span class="timeline-content"><a href="https://big-up.style/uZuqsYlISS" target="_blank" rel="noopener">1st Single「Best Day」</a> リリース</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="contact-grid">
-        <div class="contact-card">
-          <p class="contact-label">XのDM</p>
-          <a href="https://x.com/_na_no_so_" target="_blank" rel="noopener">@_na_no_so_</a>
+    <!-- CONTACT -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">Contact</span>
+          <h2 class="section-title">お問い合わせ</h2>
+          <p class="section-lead">
+            動画編集のご依頼や、その他のお問い合わせはこちらからどうぞ。
+          </p>
         </div>
-        <div class="contact-card">
-          <p class="contact-label">メール</p>
-          <a href="mailto:2015.na.so.out@gmail.com">メールを送る</a>
-        </div>
-        <div class="contact-card">
-          <p class="contact-label">ココナラ</p>
-          <a href="https://coconala.com/services/4146506" target="_blank" rel="noopener">ページを見る</a>
+
+        <div class="contact-box">
+          <p>
+            活動についてのご連絡もお気軽にお問い合わせください。<br>
+            動画編集サービスについては、内容を確認してからお見積もり・ご相談を承ります。
+          </p>
+
+          <div class="contact-buttons">
+            <a class="contact-button" href="https://x.com/_na_no_so_" target="_blank" rel="noopener">𝕏 XでDM</a>
+            <a class="contact-button" href="mailto:2015.na.so.out@gmail.com">✉ メール</a>
+            <a class="contact-button" href="https://coconala.com/services/4146506" target="_blank" rel="noopener">ココナラ</a>
+          </div>
         </div>
       </div>
     </section>
@@ -783,15 +1115,24 @@
 
   <!-- FOOTER -->
   <footer>
-    <div class="footer-inner">
-      <p class="footer-name">夏野空 Official Site</p>
-      <div class="footer-sns">
-        <a href="https://www.youtube.com/@_na_no_so_" target="_blank" rel="noopener">YouTube</a>
-        <a href="https://x.com/_na_no_so_" target="_blank" rel="noopener">X</a>
-        <a href="https://reality.app/profile/c184eef1?adj_t=8ogcewh_z9yhix5" target="_blank" rel="noopener">REALITY</a>
-        <a href="https://kakuyomu.jp" target="_blank" rel="noopener">カクヨム</a>
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <div class="footer-brand">歌うたい、夏野空。</div>
+          <div class="footer-copy">歌って、話して、作っています。</div>
+        </div>
+
+        <div class="footer-links">
+          <a href="https://www.youtube.com/@_na_no_so_" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://x.com/_na_no_so_" target="_blank" rel="noopener">X</a>
+          <a href="https://note.com/_na_no_so_" target="_blank" rel="noopener">note</a>
+          <a href="https://app.palmu.jp/users/9536e8300e8c424ab298" target="_blank" rel="noopener">Palmu</a>
+          <a href="https://kakuyomu.jp/users/_na_no_so_" target="_blank" rel="noopener">カクヨム</a>
+          <a href="https://coconala.com/users/5705140/" target="_blank" rel="noopener">ココナラ</a>
+        </div>
       </div>
-      <p class="footer-copy">© 2025 夏野空</p>
+
+      <div class="copyright">© 2026 夏野空</div>
     </div>
   </footer>
 
